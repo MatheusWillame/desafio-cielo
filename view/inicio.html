@@ -142,7 +142,6 @@
     <div class="bg-light p-5 rounded">
         <h2>Cadastro Transações</h2>
         <p class="lead">Adicione uma nova transação preenchendo o formulário</p>
-
         <form name="transacaoForm">
             <input class="form-control form-control-f" type="datetime-local" ng-model="transacao.date" ng-required="true" name="date" placeholder="Data" />
             <select class="form-control form-control-f" ng-model="transacao.paymentType" name="paymentType" ng-options="tipoPagamento.tipo as tipoPagamento.tipo group by tipoPagamento.categoria for tipoPagamento in tiposPagamentos" ng-required="true">
@@ -161,7 +160,6 @@
                 <option value="">Selecione o Status</option>
             </select>
         </form>
-
         <div ng-show="transacaoForm.date.$error.required && transacaoForm.date.$dirty" class="alert alert-danger">
             Por favor, selecione uma Data.
         </div>
@@ -189,7 +187,6 @@
 
         <button class="btn btn-primary btn-lg btn-block" ng-click="adicionarTransacao(transacao)" ng-disabled="transacaoForm.$invalid">Adicionar Transação</button>
         </div>
-
     </div>
     
   </main>

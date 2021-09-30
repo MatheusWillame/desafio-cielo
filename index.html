@@ -23,54 +23,48 @@
 	<script src="http://cdn.zingchart.com/angular/zingchart-angularjs.js"></script>
 </head>
 <body>
-
 	<header>
 		<div class="px-3 py-2 bg-light text-dark">
 		  <div class="container">
 			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-			  <a href="#/inicio"  class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-				<img src="https://www.cielo.com.br/_nuxt/img/logo_footer.6eaf9b6.svg" />
-			  </a>
-	
-			  <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-				<li>
-				  <a href="#/inicio" class="nav-link text-secondary">
-					<i width="24" height="24" class="fas fa-home bi d-block mx-auto mb-1 icon-bar"></i> 
-					Inicio
-				  </a>
+			  	<a href="#/inicio"  class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+					<img src="https://www.cielo.com.br/_nuxt/img/logo_footer.6eaf9b6.svg" />
+			  	</a>
+			 	<ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+					<li>
+						<a href="#/inicio" class="nav-link text-secondary">
+							<i width="24" height="24" class="fas fa-home bi d-block mx-auto mb-1 icon-bar"></i> 
+							Inicio
+						</a>
 				</li>
 				<li>
-				  <a href="#/dashboard" class="nav-link  text-secondary">
-					<i width="24" height="24" class="fas fa-tachometer-alt bi d-block mx-auto mb-1 icon-bar"></i>
-					Dashboard
-				  </a>
+					<a href="#/dashboard" class="nav-link  text-secondary">
+						<i width="24" height="24" class="fas fa-tachometer-alt bi d-block mx-auto mb-1 icon-bar"></i>
+						Dashboard
+					</a>
 				</li>
 				<li>
-				  <a href="#/tabela" class="nav-link  text-secondary">
-					<i width="24" height="24" class="fas fa-table bi d-block mx-auto mb-1 icon-bar"></i>
-					Tabelas
-				  </a>
+					<a href="#/tabela" class="nav-link  text-secondary">
+						<i width="24" height="24" class="fas fa-table bi d-block mx-auto mb-1 icon-bar"></i>
+						Tabelas
+					</a>
+				<li>
 			  </ul>
 			</div>
 		  </div>
 		</div>
 	</header>
-	
 	<main>
 		<div class="container py-4">
-		  <header class="pb-3 mb-4 border-bottom">
-			<a class="d-flex align-items-center text-dark text-decoration-none">
-			  <span class="fs-4">Gerenciamento de Transações</span>
-			</a>
-		  </header>
-	
+			<header class="pb-3 mb-4 border-bottom">
+				<a class="d-flex align-items-center text-dark text-decoration-none">
+					<span class="fs-4">Gerenciamento de Transações</span>
+				</a>
+			</header>
 		</div>
 	</main>
-  	
-	<!-- Tabela Resumo Transações  -->
 	<div ng-view></div>
 	<div ng-include src="'http://127.0.0.1:8887/view/footer.html'"></div>
-	
 </body>
 </html>
 
