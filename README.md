@@ -13,12 +13,12 @@ O sistema proporciona interação com os dados através de filtros, ordenação 
 
 2º Passo - Acesse a pasta *“/backend”* e rode o arquivo **server.js** através do comando **“node server.js”**.
 
-2º Passo - Instale a extensão **Web Server for Chrome** do navegador Chrome, acesse: [Link Download Web Server](https://encurtador.com.br/dgmJU) 
+3º Passo - Instale a extensão **Web Server for Chrome** do navegador Chrome, acesse: [Link Download Web Server](https://encurtador.com.br/dgmJU) 
 
-3º Passo - Selecione a pasta do projeto através do botão “CHOOSE FOLDER”
+4º Passo - Selecione a pasta do projeto através do botão “CHOOSE FOLDER”
 > Atenção: Observe se o server está na porta padrão do projeto “8887”, caso não esteja, altere na opção "Enter Port".
 
-4º Passo - Acesse o sistema através do link http://127.0.0.1:8887
+5º Passo - Acesse o sistema através do link http://127.0.0.1:8887
 
 </br>
 
