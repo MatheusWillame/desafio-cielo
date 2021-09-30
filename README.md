@@ -80,6 +80,8 @@ Acesse o sistema http://127.0.0.1:8887/#/inicio
 
 *Ordenação da tabela* - Clique na coluna desejada para ordenar a tabela com base no critério da coluna alvo do clique, além do mais, duplo clique inverte a ordenação.
 
+>Desenvolvido por Matheus Willame
+
 
 
 
