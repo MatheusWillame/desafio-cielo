@@ -1,0 +1,1 @@
+angular.module("listaTransacoes", ['ngMessages','zingchart-angularjs','ngRoute']);

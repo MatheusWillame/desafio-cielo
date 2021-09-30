@@ -1,0 +1,56 @@
+<!-- Formulário Cadastro  -->
+<div class="jumbotron">
+    <form name="transacaoForm">
+        <input class="form-control" type="number" ng-model="transacao.id" ng-required="true" ng-minlength="5" name="id" placeholder="ID"/>
+        <input class="form-control" type="datetime-local" ng-model="transacao.date" ng-required="true" name="date" placeholder="Data" />
+        <select class="form-control" ng-model="transacao.paymentType" name="paymentType" ng-options="tipoPagamento.tipo as tipoPagamento.tipo group by tipoPagamento.categoria for tipoPagamento in tiposPagamentos" ng-required="true">
+            <option value="">Selecione o Tipo de Pagamento</option>
+        </select>
+        <select class="form-control" ng-model="transacao.cardBrand" name="cardBrand" ng-options="marca for marca in marcasCartao" ng-required="true">
+            <option value="">Selecione a Bandeira do Cartão</option>
+        </select>
+        <input class="form-control" type="number" min="1" step="any" ng-model="transacao.netAmount" ng-required="true" name="netAmount" placeholder="Valor Líquido"/>
+        <select class="form-control" ng-model="transacao.channel" name="channel" ng-options="canal for canal in canaisPagamento" ng-required="true">
+            <option value="">Selecione o Canal de Pagamento</option>
+        </select>
+        <input class="form-control" type="number" min="1" step="any" ng-model="transacao.minimumMDRAmmount" ng-required="true" name="minimumMDRAmmount" placeholder="Qtd Mínima de MDR"/>
+        <input class="form-control" type="number" min="1" step="any" ng-model="transacao.mdrFeeAmount" ng-required="true" name="mdrFeeAmount" placeholder="Valor da taxa de MDR"/>
+        <select class="form-control" ng-model="transacao.status" name="status" ng-options="statusTra for statusTra in statusTransacao" ng-required="true">
+            <option value="">Selecione o Status</option>
+        </select>
+    </form>
+
+    <!-- Validações do formulário -->
+    <div ng-show="transacaoForm.id.$error.required && transacaoForm.id.$dirty" class="alert alert-danger">
+        Por favor, preencha o campo ID.
+    </div>
+    <div ng-show="transacaoForm.id.$error.minlength" class="alert alert-danger">
+        O campo ID deve conter no mínimo 5 Caracteres.
+    </div>
+
+    <div ng-show="transacaoForm.date.$error.required && transacaoForm.date.$dirty" class="alert alert-danger">
+        Por favor, selecione uma Data.
+    </div>
+    <div ng-show="transacaoForm.paymentType.$invalid && transacaoForm.paymentType.$dirty" class="alert alert-danger">
+        Por favor, selecione o Tipo de Pagamento.
+    </div>
+    <div ng-show="transacaoForm.cardBrand.$invalid && transacaoForm.cardBrand.$dirty" class="alert alert-danger">
+        Por favor, selecione a bandeira do Cartão
+    </div>
+    <div ng-show="transacaoForm.netAmount.$invalid && transacaoForm.netAmount.$dirty" class="alert alert-danger">
+        Por favor, preencha o campo valor líquido.
+    </div>
+    <div ng-show="transacaoForm.channel.$invalid && transacaoForm.channel.$dirty" class="alert alert-danger">
+        Por favor, preencha o campo Canal
+    </div>
+    <div ng-show="transacaoForm.minimumMDRAmmount.$invalid && transacaoForm.minimumMDRAmmount.$dirty" class="alert alert-danger">
+        Por favor, preencha o campo Qtd Mínima de MDR
+    </div>
+    <div ng-show="transacaoForm.mdrFeeAmount.$invalid && transacaoForm.mdrFeeAmount.$dirty" class="alert alert-danger">
+        Por favor, preencha o campo Valor da taxa de MDR
+    </div>
+    <div ng-show="transacaoForm.status.$invalid && transacaoForm.status.$dirty" class="alert alert-danger">
+        Por favor, preencha o campo Status
+    </div>
+    <button class="btn btn-primary btn-block" ng-click="adicionarTransacao(transacao)" ng-disabled="transacaoForm.$invalid">Adicionar Contato</button>
+</div>

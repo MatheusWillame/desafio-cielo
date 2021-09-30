@@ -1,0 +1,80 @@
+<div class="container btn-return">
+    <a class="btn btn-primary btn-lg" href="#/inicio" role="button">Voltar</a>
+</div>
+
+<main class="container shadow p-3 mb-5 bg-body rounded">
+    <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm bar-details">
+      <div class="lh-1">
+        <h1 class="h4 mb-0 text-white lh-1 btn-return">Detalhes da Transação</h1>
+        <small>#{{itemSelect.id}}</small>
+      </div>
+    </div>
+
+    <table class="table">
+        <tr>
+            <td><span class="lb-bold">Id: </span>{{itemSelect.id}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Id do Comerciante: </span>{{itemSelect.merchantId}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Nó de pagamento: </span>{{itemSelect.paymentNode}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">CNPJ: </span>{{itemSelect.cnpjRoot}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Data: </span>{{itemSelect.date | date:'dd/MM/yyyy HH:mm'}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Tipo de Pagamento: </span>{{itemSelect.paymentType}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Bandeira do Cartão: </span>{{itemSelect.cardBrand}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Código de Autorização: </span>{{itemSelect.authorizationCode}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Número do Cartão: </span>{{itemSelect.truncatedCardNumber}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Valor Bruto: </span>{{itemSelect.grossAmount}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Valor Líquido: </span>{{itemSelect.netAmount}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Terminal: </span>{{itemSelect.terminal}}</td>
+        </tr> 
+
+        <tr>
+            <td><span class="lb-bold">Taxa de Administração: </span>{{itemSelect.administrationFee}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Cod. do Canal: </span>{{itemSelect.channelCode}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Canal: </span>{{itemSelect.channel}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Montante Retirado: </span>{{itemSelect.withdrawAmount}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Quantidade Mínima de MDR: </span>{{itemSelect.minimumMDRAmmount}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Valor do Imposto MDR: </span>{{itemSelect.mdrTaxAmount}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Valor da Taxa de MDR: </span>{{itemSelect.mdrFeeAmount}}</td>
+        </tr> 
+        <tr>
+            <td><span class="lb-bold">Status: </span>{{itemSelect.status}}</td>
+        </tr> 
+    </table>
+    </div>
+  </main>
+
+
+

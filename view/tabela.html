@@ -1,0 +1,49 @@
+<div>
+    <ui-alert title="Ops! ocorreu um problema" ng-show="error" message="error" details="details" ></ui-alert>
+    <table ng-show="dsTransacoes.length > 0" class="table table-striped table-bordered table-striped mb-0">
+        <tr>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('merchantId')"  class="text-table-th"><i class="fas fa-sort icon-th"></i>ID Cliente</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('paymentNode')"  class="text-table-th"><i class="fas fa-sort icon-th"></i>Nó Pagamento</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('authorizationCode')"  class="text-table-th"><i class="fas fa-sort icon-th"></i>Cod. Autorizacao</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('terminal')"  class="text-table-th"><i class="fas fa-sort icon-th"></i>Terminal</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('date')"  class="text-table-th"><i class="fas fa-sort icon-th"></i>Data</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('paymentType')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Tipo de Pagamento</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('cardBrand')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Bandeira do Cartão</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('netAmount')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Valor Líquido</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('channel')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Canal</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('minimumMDRAmmount')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Qtd Mín. MDR</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('mdrFeeAmount')" class="text-table-th"><i class="fas fa-sort icon-th"></i>taxa MDR</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('status')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Status</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('truncatedCardNumber')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Núm. Cartão Trunc.</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('grossAmount')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Valor Bruto</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('administrationFee')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Taxa de Adm.</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('channelCode')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Cod. Canal</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('withdrawAmount')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Montante Ret.</a></th>
+            <th class="table-tr"><a href="" ng-click="ordernarPor('mdrTaxAmount')" class="text-table-th"><i class="fas fa-sort icon-th"></i>Imposto MDR</a></th>
+        </tr>
+        <tr ng-repeat="trasacao in dsTransacoes | filter:criterioBusca | orderBy:criterioOrdenacao:direcaoOrdenacao">
+            <td class="text-table-th">{{trasacao.merchantId}}</td>
+            <td class="text-table-th">{{trasacao.paymentNode}}</td>
+            <td class="text-table-th">{{trasacao.authorizationCode}}</td>
+            <td class="text-table-th">{{trasacao.terminal}}</td> 
+            <td class="text-table-th">{{trasacao.date | date:'dd/MM/yyyy HH:mm'}}</td>
+            <td class="text-table-th">{{trasacao.cnpjRoot}}</td>
+            <td class="text-table-th">{{trasacao.cardBrand}}</td>
+            <td class="text-table-th">{{trasacao.netAmount | number:2}}</td>
+            <td class="text-table-th">{{trasacao.channel}}</td>
+            <td class="text-table-th">{{trasacao.minimumMDRAmmount | number:2}}</td>
+            <td class="text-table-th">{{trasacao.mdrFeeAmount | number:2}}</td>
+            <td class="text-table-th">{{trasacao.status}}</td>
+            <td class="text-table-th">{{trasacao.truncatedCardNumber}}</td>
+            <td class="text-table-th">{{trasacao.grossAmount}}</td>
+            <td class="text-table-th">{{trasacao.administrationFee}}</td>
+            <td class="text-table-th">{{trasacao.channelCode}}</td>
+            <td class="text-table-th">{{trasacao.withdrawAmount}}</td>
+            <td class="text-table-th">{{trasacao.mdrTaxAmount}}</td>
+        </tr>
+    </table>
+</div>
+
+
+
+
