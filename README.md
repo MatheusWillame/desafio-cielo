@@ -9,9 +9,11 @@ O sistema proporciona interação com os dados através de filtros, ordenação 
 
 ## Instruções para rodar o projeto</br>
 
-1º Passo - Acesse a pasta “/backend” e rode o arquivo server.js através do comando “node server.js”.
+1º Passo - efetue o git clone do projeto https://github.com/MatheusWillame/desafio-cielo.git
 
-2º Passo - Instale a extensão **Web Server for Chrome** do navegador Chrome (encurtador.com.br/dgmJU) 
+2º Passo - Acesse a pasta *“/backend”* e rode o arquivo **server.js** através do comando **“node server.js”**.
+
+2º Passo - Instale a extensão **Web Server for Chrome** do navegador Chrome, acesse: [Link Download Web Server](https://encurtador.com.br/dgmJU) 
 
 3º Passo - Selecione a pasta do projeto através do botão “CHOOSE FOLDER”
 > Atenção: Observe se o server está na porta padrão do projeto “8887”, caso não esteja, altere na opção "Enter Port".
@@ -36,7 +38,6 @@ O sistema proporciona interação com os dados através de filtros, ordenação 
 - Tratamento de erros
 - Responsivo
 
-</br>
 </br>
 
 # Fluxo de teste do Sistema
